@@ -1,6 +1,6 @@
 /* Library of Alexandria — service worker.
    Shell cached for offline launch; API is network-first (fresh data, graceful offline). */
-const CACHE = 'loa-v58';
+const CACHE = 'loa-v61';
 const SHELL = [
   '/', '/static/css/app.css', '/static/css/tokens.css', '/static/css/fonts.css',
   '/static/js/app.js', '/manifest.json',
