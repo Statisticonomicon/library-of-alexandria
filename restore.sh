@@ -17,6 +17,17 @@ if [ -z "$FILE" ]; then
 fi
 [ -f "$FILE" ] || { echo "No such file: $FILE"; exit 1; }
 
+# A truncated or empty dump must be refused BEFORE we stop the app and start
+# overwriting data. The August incident produced 0-byte .sql files; without
+# this check, restoring one would leave a half-empty database that reports
+# success.
+if [ ! -s "$FILE" ]; then
+  echo "REFUSING: $FILE is empty (0 bytes) — not a valid backup."; exit 1
+fi
+if ! grep -qm1 'PostgreSQL database dump' "$FILE"; then
+  echo "REFUSING: $FILE does not look like a pg_dump file."; exit 1
+fi
+
 echo "==> Stopping the app (so the database has no open connections) ..."
 docker compose stop app >/dev/null 2>&1 || true
 
@@ -28,5 +39,9 @@ for _ in $(seq 1 30); do
 done
 
 echo "==> Restoring $FILE  (this replaces current data)"
-docker compose exec -T db psql -U "$DB_USER" -d "$DB_NAME" < "$FILE"
+# ON_ERROR_STOP=1: without it psql restores whatever parses, skips the rest,
+# and exits 0 — a half-restored database that reports success. --single-transaction
+# makes the restore all-or-nothing, so a failure leaves the previous data intact.
+docker compose exec -T db psql -U "$DB_USER" -d "$DB_NAME" \
+    --set ON_ERROR_STOP=1 --single-transaction < "$FILE"
 echo "Done. Start the app with:  docker compose up -d app"
