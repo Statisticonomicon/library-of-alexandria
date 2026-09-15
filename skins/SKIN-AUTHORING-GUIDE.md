@@ -74,7 +74,7 @@ and fixed.
    often Greek. The **body** font — `--font-ui` (and `--font-meta`) — must
    resolve to a Greek-capable face. Safe choices: any system stack
    (`-apple-system,…`, `"Iowan Old Style",…serif`), or the self-hosted
-   `IBM Plex Mono`, `Oxanium`, `Chakra Petch`, `Rajdhani` (their `@font-face`
+   `JetBrains Mono`, `Oxanium`, `Chakra Petch`, `Rajdhani` (their `@font-face`
    carry greek + greek-ext subsets). Latin-only display fonts
    (Orbitron, Audiowide, Michroma, Righteous, Saira Stencil One, Special Elite,
    VT323, …) are fine for **`--font-display`** (the wordmark/headings, which are
@@ -235,7 +235,7 @@ existing skins use:
 ## 4. Fonts
 
 - The app self-hosts fonts (offline/tailnet-safe — **no Google CDN at
-  runtime**). Current families: Rajdhani, Share Tech Mono, IBM Plex Mono,
+  runtime**). Current families: Rajdhani, Share Tech Mono, JetBrains Mono,
   Chakra Petch, Oxanium, Marcellus, Michroma, Audiowide, Righteous, Saira
   Stencil One, Orbitron, Oswald, Playfair Display, VT323, Special Elite.
 - **If your skin only uses families already in that list → no font work.**

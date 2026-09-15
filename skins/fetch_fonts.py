@@ -7,7 +7,7 @@ from pathlib import Path
 CSS_URL = ("https://fonts.googleapis.com/css2?"
            # --- original 6 ---
            "family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&"
-           "family=IBM+Plex+Mono:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&"
+           "family=JetBrains+Mono:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&"
            "family=Oxanium:wght@500;600;700&family=Marcellus&"
            # --- 8 new (for the 14 new skins; decorative chrome only) ---
            "family=Michroma&family=Audiowide&family=Righteous&"

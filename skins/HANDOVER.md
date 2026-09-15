@@ -59,7 +59,7 @@ are untouched — this is CSS + a 70-line theme switcher only.
    ```html
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&family=IBM+Plex+Mono:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&family=Oxanium:wght@500;600;700&family=Marcellus&family=Michroma&family=Audiowide&family=Righteous&family=Saira+Stencil+One&family=Orbitron:wght@500;600;700&family=Oswald:wght@500;600;700&family=Playfair+Display:wght@600;700&family=VT323&display=swap">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;500;600;700&family=Chakra+Petch:wght@500;600;700&family=Oxanium:wght@500;600;700&family=Marcellus&family=Michroma&family=Audiowide&family=Righteous&family=Saira+Stencil+One&family=Orbitron:wght@500;600;700&family=Oswald:wght@500;600;700&family=Playfair+Display:wght@600;700&family=VT323&display=swap">
    <link rel="stylesheet" href="/static/tokens.css">
    <link rel="stylesheet" href="/static/app.css">
    <script src="/static/themes.js" defer></script>
@@ -74,7 +74,7 @@ are used only by the non-Apple skins; without network they fall back to system
 fonts gracefully (the three Apple-style skins use system fonts and are
 unaffected, and every skin names a system fallback so text is never invisible).
 The full family list to self-host for offline fidelity: Rajdhani, Share Tech
-Mono, IBM Plex Mono, Chakra Petch, Oxanium, Marcellus, Michroma, Audiowide,
+Mono, JetBrains Mono, Chakra Petch, Oxanium, Marcellus, Michroma, Audiowide,
 Righteous, Saira Stencil One, Orbitron, Oswald, Playfair Display, VT323. Download them
 with google-webfonts-helper into `/static/fonts/`, put the `@font-face` rules at
 the **top of `tokens.css`**, then delete the Google `<link>` tags.

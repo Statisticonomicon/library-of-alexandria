@@ -677,7 +677,7 @@ html[data-theme="acid-terminal"] .crt-scanlines {
 
 /* ============ Atompunk pair ============ */
 
-/* Googie — boomerang/atomic optimism: pill controls, starburst headings */
+/* Googie — boomerang/atomic optimism: pill controls, radiating-star headings */
 [data-theme="atom-googie"] .card h2 { display: flex; align-items: center; gap: 8px; }
 [data-theme="atom-googie"] .card h2::before { content: "✦"; color: var(--accent); }
 [data-theme="atom-googie"] .tab { border-radius: 99px; }
@@ -766,7 +766,7 @@ html[data-theme="acid-terminal"] .crt-scanlines {
 [data-theme="dos-green"] .topbar .logout {
   background: #021006; color: #3bff6a; border: 2px solid #021006;
 }
-/* Panels: authentic IBM double-line box borders */
+/* Panels: authentic DOS-era double-line box borders */
 [data-theme="dos-green"] .card,
 [data-theme="dos-green"] .login-card,
 [data-theme="dos-green"] .libmap-frame,
@@ -852,7 +852,7 @@ html[data-theme="acid-terminal"] .crt-scanlines {
 [data-theme="soviet-constructivist"] .detail-authors { color: #c41e1e; font-weight: 600; }
 /* Diagonal constructivist accent under the active tab */
 [data-theme="soviet-constructivist"] .tab.active { font-weight: 700; }
-[data-theme="soviet-constructivist"] .badge { font-family: "IBM Plex Mono", monospace; font-weight: 600; }
+[data-theme="soviet-constructivist"] .badge { font-family: "JetBrains Mono", monospace; font-weight: 600; }
 [data-theme="soviet-constructivist"] .btn { font-family: "Oswald", sans-serif; font-weight: 600; }
 [data-theme="soviet-constructivist"] .btn:active { transform: translate(2px, 2px); box-shadow: none; }
 
