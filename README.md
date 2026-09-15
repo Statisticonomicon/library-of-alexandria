@@ -135,6 +135,6 @@ sir, are a legend! → https://github.com/eleybourn/Book-Catalogue
 *This is an independent project. It is not affiliated with, endorsed by, or derived from the
 code of Book Catalogue (which is licensed GPL-3.0); it shares no source code with it.*
 
-## Ports: mutually exclusive with prod-library-of-alexandria
+## Ports: one deployment per machine
 
-This public checkout and `prod-library-of-alexandria` publish the same host ports (`5001` app, `5432` Postgres) by design: they are the same application. Run one or the other, never both. Recorded 2026-09-11 per `/media/prj/CLAUDE.md` §3.
+The application publishes host ports `5001` (app) and `5432` (Postgres). Two deployments of it on one machine collide on those ports: run one or the other, never both.
